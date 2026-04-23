@@ -245,12 +245,17 @@ export class CollisionDetection {
       defenderPosition,
     );
 
+    // [DEMO CHANGE]: Apply distance-based accuracy attenuation
+    // Hits at the edge of the reach are inherently less stable
+    const distanceFactor = Math.max(0.7, 1 - (distance / attackReach.effectiveReach) * 0.3);
+    const finalAccuracy = accuracy * distanceFactor;
+
     return {
       hit: true,
       region: targetRegion,
       vitalPoint,
       distance,
-      accuracy,
+      accuracy: finalAccuracy,
       hitPoint: intersection.point,
     };
   }
@@ -490,10 +495,17 @@ export class CollisionDetection {
    * @korean 3D거리계산
    */
   private calculateDistance3D(pos1: Position3D, pos2: Position3D): number {
-    const dx = pos1.x - pos2.x;
-    const dy = pos1.y - pos2.y;
-    const dz = pos1.z - pos2.z;
-    return Math.sqrt(dx * dx + dy * dy + dz * dz);
+    // [DEMO CHANGE]: Use pooled Vector3 for high-precision distance calc
+    const v1 = ThreeObjectPools.vector3.acquire();
+    const v2 = ThreeObjectPools.vector3.acquire();
+    try {
+      v1.set(pos1.x, pos1.y, pos1.z);
+      v2.set(pos2.x, pos2.y, pos2.z);
+      return v1.distanceTo(v2);
+    } finally {
+      ThreeObjectPools.vector3.release(v1);
+      ThreeObjectPools.vector3.release(v2);
+    }
   }
 
   /**
