@@ -1,0 +1,3 @@
+{
+  "file_path": "tests/unit/systems/physics/test_collision_detection.py",
+  "code": "import pytest\nfrom unittest.mock import MagicMock\nimport math\n\n# We are mocking the 'checkAttackHit' function as if it were part of a Python module\n# 'src.systems.physics.CollisionDetection'. Since the target code is unavailable\n# and is originally TypeScript, this mock simulates its expected behavior based\n# on the provided summary: \"Evaluates whether a combat technique successfully\n# connects with a defender by performing broad-phase distance checks and\n# narrow-phase raycast validation.\"\n\n@pytest.fixture\ndef mock_check_attack
