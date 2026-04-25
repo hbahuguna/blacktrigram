@@ -1,0 +1,3 @@
+{
+  "file_path": "tests/unit/systems/physics/test_collision_detection.py",
+  "code": "import pytest\nfrom unittest.mock import MagicMock, call\n\n# --- Mocked Dependencies and Target Function (for testing purposes) ---\n\n# Mock anatomical constants that the function would use\nMOCK_ANATOMICAL_CONSTANTS = {\n    \"HEAD\": {\"x\": 0, \"y\": 0, \"z\": 0, \"width\": 10, \"height\": 10, \"depth\": 10},\n    \"TORSO\": {\"x\": 0, \"y\": 10, \"z\": 0,
