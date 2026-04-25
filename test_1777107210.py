@@ -1,0 +1,3 @@
+{
+  "file_path": "tests/systems/physics/test_collision_detection.py",
+  "code": "import pytest\nimport math\nfrom unittest.mock import Mock\n\n# Mock for the 'get' utility function\ndef mock_get(obj, key, default=None):\n    \"\"\"A simple mock for a 'get' utility function, simulating attribute access.\"\"\"\n    return getattr(obj, key, default)\n\n# Mock implementation of checkAttackHit\n# This mock simulates the broad-phase and narrow-phase logic based on the summary.\n# It assumes attacker and defender objects have 'position', 'broad_phase_radius',\n# and 'attack_range'
