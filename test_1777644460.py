@@ -1,0 +1,3 @@
+{
+  "file_path": "cypress/e2e/screens/combat-screen.cy.ts",
+  "code": "/// <reference types=\"cypress\" />\n\nimport { mount } from '@cypress/react';\nimport CombatScreen3D from '../../../src/components/screens/combat/CombatScreen3D';\n\n// Mock the context hooks that CombatScreen3D might use\n// Assuming a CombatContext provides state and dispatch functions\nconst mockUseCombatState = cy.stub();\nconst mockUseCombatDispatch = cy.stub();\n\n// Mock the CombatContext module to control its hooks' return values\n// This allows us to simulate different game states and verify dispatch
