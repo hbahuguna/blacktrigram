@@ -1,0 +1,3 @@
+{
+  "file_path": "cypress/e2e/screens/combat-screen.cy.ts",
+  "code": "/// <reference types=\"cypress\" />\n\ndescribe('CombatScreen3D - handleCombatInput', () => {\n  beforeEach(() => {\n    // Navigate to the combat screen. This assumes a route '/combat' exists\n    // and renders the CombatScreen3D component. For component testing,\n    // `cy.mount(<CombatScreen3D />)` would be used instead.\n    cy.visit('/combat');\n\n    // Ensure the combat screen is fully loaded and interactive before proceeding.\n    // Replace 'combat-screen-ready' with an actual data-testid
