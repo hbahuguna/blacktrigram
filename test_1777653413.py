@@ -1,0 +1,3 @@
+{
+  "file_path": "tests/unit/systems/physics/test_collision_detection.py",
+  "code": "import pytest\nfrom unittest.mock import Mock, patch\n\n# --- Mocking external dependencies and internal structures for the test ---\n# Since the actual CollisionDetection.ts code is unavailable,\n# we'll define minimal mock classes that represent the expected interfaces\n# based on the summary \"3D raycasting and anatomical bounding volumes\".\n\nclass Vector3:\n    def __init__(self, x: float, y: float, z: float):\n        self.x = x\n        self.y = y\n        self.z = z\n\n

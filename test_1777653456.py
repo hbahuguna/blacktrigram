@@ -1,0 +1,3 @@
+{
+  "file_path": "tests/unit/systems/physics/test_collision_detection.py",
+  "code": "import pytest\nimport math\nimport random\n\n# Mock implementation of checkAttackHit for testing purposes.\n# In a real scenario, this function would be imported from the game's physics system.\n# Since the target code is unavailable and specified as TypeScript, this Python mock\n# simulates the described behavior for standalone testing within a pytest framework.\ndef checkAttackHit(\n    attacker_pos: tuple[float, float],\n    attack_range: float,\n    attack_hitbox_radius: float, # Simplified: spherical hitbox radius\n    target_pos: tuple[float,
