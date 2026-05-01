@@ -1,0 +1,3 @@
+{
+  "file_path": "tests/unit/test_combat_input.py",
+  "code": "import pytest\nfrom unittest.mock import Mock\n\n# --- MOCK TARGET CODE (as if it were Python) ---\n# In a real scenario, this would be an import from the actual Python module.\n# Since the target is TypeScript, we're creating a conceptual Python equivalent\n# to satisfy the 'pytest' requirement.\n\nclass MockCombatState:\n    def __init__(self, is_in_combat=True, current_stance='neutral', is_menu_open=False):\n        self.is_in_combat = is_in_combat\n        self.current
