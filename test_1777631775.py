@@ -1,0 +1,3 @@
+{
+  "file_path": "tests/unit/test_combat_input_handler.py",
+  "code": "import pytest\n\n# Mock implementation of handleCombatInput based on the summary:\n# \"Orchestrates combat-related keyboard inputs and stance transitions while enforcing game state constraints.\"\n# This mock is created because the target code (TypeScript) is unavailable and the request specifies pytest (Python).\n# It simulates the expected behavior for testing purposes.\n\ndef handleCombatInput(event: dict, combat_state: dict, player_character: dict) -> tuple[dict, dict]:\n    \"\"\"\n    Simulates the combat input handling logic for testing.\n    Takes an event, current combat state,
