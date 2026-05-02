@@ -1,0 +1,3 @@
+{
+  "file_path": "tests/unit/combat/test_speed_modifiers.py",
+  "code": "import pytest\nfrom typing import List, Dict, Any\n\n# Mock Combatant class for testing purposes\n# In a real application, this would be an actual data model or interface.\nclass MockCombatant:\n    def __init__(self, id: str, base_speed: float, base_acceleration: float,\n                 current_health_percentage: float = 1.0,\n                 status_effects: List[str] = None,\n                 injuries: List[str] = None,\n                 encumbrance_level: str = 'light'):\n        self.
