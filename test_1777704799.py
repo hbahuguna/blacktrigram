@@ -1,0 +1,3 @@
+{
+  "file_path": "tests/unit/combat/test_animation_state_conversion.py",
+  "code": "import pytest\nfrom typing import Dict, Any\n\n# NOTE: The target code `animationStateToPlayerAnimation` is originally in TypeScript.\n# For the purpose of generating a Pytest test as requested, this Python function\n# is a direct simulation of the expected behavior based on the function summary.\n# In a real-world scenario, a TypeScript function would typically be unit tested\n# using a JavaScript/TypeScript testing framework like Jest or Vitest.\n\ndef animationStateToPlayerAnimation(internal_state: Dict[str, Any]) -> str:\n    \"\"\"\n    Con
